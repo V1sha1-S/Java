@@ -1,15 +1,24 @@
 package bankAccount;
 
-public class bankAccount {
+abstract class Deposit {
+    abstract void Deposit(double amt);
+}
+
+public class bankAccount extends Deposit {
     private String Name;
     private String acNum;
-    double balance;
+    private double balance;
 
-    bankAccount() {
-        this.Name = "N/A";
-        this.acNum = "N/A";
-        this.balance = -1;
+    void Deposit(double amt) {
+        this.balance += amt;
+        // System.out.println("Deposited: " + amt + " | New Balance: " + this.balance);
     }
+
+    // bankAccount() {
+    // this.Name = "N/A";
+    // this.acNum = "N/A";
+    // this.balance = -1;
+    // }
 
     bankAccount(String name, String acNum, double balance) {
         this.Name = name;
@@ -29,8 +38,8 @@ public class bankAccount {
         return balance;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalance(double total) {
+        this.balance = total;
     }
 
     void display() {
