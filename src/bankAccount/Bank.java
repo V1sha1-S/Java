@@ -1,6 +1,6 @@
 package bankAccount;
 
-public class Bank {
+public class Bank extends Transaction {
     private int accNum;
     private String Name;
     private double balance;
@@ -25,5 +25,20 @@ public class Bank {
 
     public double setBalance(int amt) {
         return balance += amt;
+    }
+
+    public String custDetails() {
+        return "Name: " + Name + " Account Number: " + accNum + " Balance: " + balance;
+    }
+
+    double deposit(int amt) {
+        System.out.println("inside deposit:" + amt);
+        return balance += amt;
+
+    }
+
+    double withdraw(int amt) {
+        System.out.println("inside withdraw:" + amt);
+        return balance -= amt;
     }
 }
