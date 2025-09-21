@@ -2,12 +2,9 @@ package bankAccount;
 
 public class Main {
     public static void main(String[] args) {
-        bankAccount b1 = new bankAccount("Vishal S", "99002352", 1000);
-        b1.display();
-        b1.Deposit(100);
-        b1.display();
+        Bank acc1 = new Bank(66277328, "Vishal", 10002.12);
 
-        savingAcount s1 = new savingAcount("vishal", "66152521", 10000, 10);
-        s1.display();
+        System.out.println(
+                "Account Number: " + acc1.getAccNum() + " Name: " + acc1.getName() + " Balance: " + acc1.getBalance());
     }
 }
