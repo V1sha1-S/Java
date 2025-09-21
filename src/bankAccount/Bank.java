@@ -22,4 +22,8 @@ public class Bank {
     public double getBalance() {
         return balance;
     }
+
+    public double setBalance(int amt) {
+        return balance += amt;
+    }
 }

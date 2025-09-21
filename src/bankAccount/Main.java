@@ -6,5 +6,10 @@ public class Main {
 
         System.out.println(
                 "Account Number: " + acc1.getAccNum() + " Name: " + acc1.getName() + " Balance: " + acc1.getBalance());
+
+        acc1.setBalance(1000);
+        System.out.println(
+                "Account Number: " + acc1.getAccNum() + " Name: " + acc1.getName() + " Balance: " + acc1.getBalance());
+
     }
 }
