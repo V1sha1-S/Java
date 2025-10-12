@@ -24,6 +24,14 @@ public class Main {
             System.out.println("Employee not present with the mentioned Id");
         }
 
+        Employee emp = empPay.highestSalary();
+
+        if (emp != null) {
+            System.out.println("\nHighest Paid Employee: " + emp.getName() + " - " + emp.getSalary());
+        } else {
+            System.out.println("No employees found!");
+        }
+
         empPay.displayAll();
     }
 }

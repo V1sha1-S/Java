@@ -2,7 +2,7 @@ package Collection.EmployeeManagement;
 
 public class Employee {
     private int empId;
-    protected String name;
+    private String name;
     private double salary;
 
     Employee(int empId, String name, double salary) {
@@ -13,6 +13,10 @@ public class Employee {
 
     public int getEmpId() {
         return empId;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getSalary() {
