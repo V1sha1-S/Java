@@ -1,5 +1,6 @@
 package Lets_Crack;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Account {
@@ -44,11 +45,20 @@ class Account {
 public class Assignment1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int accNo = 0;
 
         System.out.println("Enter the amount");
         double amount = sc.nextDouble();
-        System.out.println("Enter the Account Number");
-        int accNo = sc.nextInt();
+        while (true) {
+            try {
+                System.out.println("Enter the Account Number");
+                accNo = sc.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Enter the valid account number ");
+                sc.next();
+            }
+        }
         System.out.println("Enter the amount to be withdraw");
         double withdrawAmount = sc.nextDouble();
 
