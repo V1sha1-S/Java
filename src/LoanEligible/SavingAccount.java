@@ -7,7 +7,7 @@ public class SavingAccount extends Account implements LoanEligible {
 
     String accountType;
 
-    SavingAccount(double accountNumber, double balance, String accountType) {
+    public SavingAccount(double accountNumber, double balance, String accountType) {
         super(accountNumber, balance);
         this.accountType = accountType;
     }
